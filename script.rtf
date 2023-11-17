@@ -1,0 +1,1 @@
+while IFS=, read -r package version || [ -n "$package" ]; do [ -z "$package" ] || dotnet add package "$package" --version "$version"; done < packages.txt

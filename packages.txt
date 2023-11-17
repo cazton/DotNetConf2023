@@ -1,0 +1,4 @@
+Azure.AI.OpenAI,1.0.0-beta.8  
+DotNetEnv,2.5.0  
+itext7,8.0.1
+

@@ -1,0 +1,18 @@
+<div id="chatBox">
+
+</div>
+<input type="text" id="userMessage" />
+<button onclick="sendMessage()">Send</button>
+
+<script>
+
+    function sendMessage(){
+        var userMessage = $("#userMessage").val();
+
+        $.post("/Chat/GetResponseFromPdf", {userMessage: userMessage}, function(data){
+            $("#chatBox").append("<p>User: " + userMessage + "</p>");
+            $("#chatBox").append("<p>Cazton AI: " + data.response + "</p>");
+        });
+    }
+</script>
+
